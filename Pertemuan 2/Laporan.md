@@ -54,5 +54,6 @@ Jawab: Dengan menggunakan parameter bilangan int, metode ini memiliki fokus yang
 
 6. Commit dan push kode program ke Github
 
+Jawab: ![alt text](image.png)
 
 
