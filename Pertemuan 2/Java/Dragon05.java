@@ -1,3 +1,4 @@
+package Java;
 class Dragon {
     int x, y, width, height;
 

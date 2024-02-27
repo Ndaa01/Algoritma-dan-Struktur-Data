@@ -1,3 +1,4 @@
+package Java;
 public class Buku05 {
 
     String judul, pengarang;

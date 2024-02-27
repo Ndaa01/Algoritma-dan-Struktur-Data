@@ -1,3 +1,4 @@
+package Java;
 public class BukuMain05 {
         public static void main(String[] args) {
             Buku05 bk1 = new Buku05();
