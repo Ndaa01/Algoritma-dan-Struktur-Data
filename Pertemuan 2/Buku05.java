@@ -1,7 +1,7 @@
 public class Buku05 {
 
     String judul, pengarang;
-    int halaman, stok, harga;
+    int halaman, stok, harga, terjual;
 
     void tampilInformasi () {
         System.out.println("Judul : " + judul);
@@ -11,9 +11,12 @@ public class Buku05 {
         System.out.println("Harga: " + harga);
     }
 
-    void terjual(int jml) {
+        void terjual(int jml) {
         if (stok > 0 && stok >= jml) {
+            terjual = jml;
             stok -= jml;
+        } else {
+            System.out.println("Stok buku " + judul + " sudah habis.");
         }
     }
 
@@ -23,6 +26,29 @@ public class Buku05 {
 
     void gantiHarga(int hrg) {
         harga = hrg;
+    }
+
+    int hitungHargaTotal() {
+        int hargaTotal = terjual * harga;
+        return hargaTotal;
+    }
+
+    int hitungDiskon() {
+        int totalHarga = hitungHargaTotal();
+        double diskon = 0;
+
+        if (totalHarga > 150000) {
+            diskon = 0.12;
+        } else if (totalHarga >= 75000) {
+            diskon = 0.05;
+        }
+        return (int) (totalHarga * diskon);
+    }
+
+    int hitungHargaBayar() {
+        int totalHarga = hitungHargaTotal();
+        int diskon = hitungDiskon();
+        return totalHarga - diskon;
     }
 
 public Buku05() {

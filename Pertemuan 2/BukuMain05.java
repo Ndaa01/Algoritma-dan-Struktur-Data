@@ -19,5 +19,8 @@ public class BukuMain05 {
             Buku05 bk3 = new Buku05("Struktur Data", "Nanda", 154, 14, 88999);
             bk3.terjual(7);
             bk3.tampilInformasi();
+            System.out.println("Total Harga: " + bk3.hitungHargaTotal());
+            System.out.println("Diskon: " + bk3.hitungDiskon());
+            System.out.println("Total Bayar: " + bk3.hitungHargaBayar());
         }
     }
