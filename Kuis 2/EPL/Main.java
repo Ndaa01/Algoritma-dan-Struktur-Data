@@ -23,7 +23,6 @@ public class Main {
         // Simulasi pertandingan
         simulateMatches(eplStandings, clubs);
 
-        // Menu
         Scanner scanner = new Scanner(System.in);
         int choice;
         do {
@@ -35,12 +34,10 @@ public class Main {
             choice = scanner.nextInt();
             switch (choice) {
                 case 1:
-                    // Menampilkan klasemen
                     eplStandings.sortStandings();
                     eplStandings.displayStandings();
                     break;
                 case 2:
-                    // Menampilkan riwayat tim
                     displayTeamMenu(scanner, eplStandings, clubs);
                     break;
                 case 3:
@@ -72,7 +69,6 @@ public class Main {
         Random rand = new Random();
         for (int i = 0; i < clubs.length; i++) {
             for (int j = i + 1; j < clubs.length; j++) {
-                // Setiap pasangan tim bermain dua kali
                 for (int k = 0; k < 2; k++) {
                     int score1 = rand.nextInt(5); // Skor acak untuk tim 1 (0-4)
                     int score2 = rand.nextInt(5); // Skor acak untuk tim 2 (0-4)
